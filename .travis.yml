@@ -1,0 +1,14 @@
+language: ruby
+rvm:
+  - 2.3.3
+
+script:
+  - bundle exec jekyll build
+  - bundle exec htmlproofer --empty-alt-ignore --disable-external ./_site
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
