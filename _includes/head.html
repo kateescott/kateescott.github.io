@@ -19,6 +19,14 @@
   {%- endif -%}
 {%- endcapture -%}
 
+{%- capture featured_image -%}
+  {%- if page.collection == "projects" -%}
+    {{ page | get_featured_image_path }}
+  {%- else -%}
+    /assets/icons/site-image.png
+  {%- endif -%}
+{%- endcapture -%}
+
 {% assign canonical = page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url %}
 {% assign description = description | strip_html | strip_newlines | truncate: 160 %}
 
@@ -35,10 +43,7 @@
   <link rel="canonical" href="{{ canonical }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
-  {% if page.collection == "projects" %}
-    <meta property="og:image" content="{{ page | get_featured_image_path | prepend: site.baseurl | prepend: site.url }}" />
-  {% endif %}
-  <meta property="og:image" content="{{ "/assets/icons/site-image.png" | prepend: site.baseurl | prepend: site.url }}" />
+  <meta property="og:image" content="{{ featured_image | prepend: site.baseurl | prepend: site.url }}" />
   <meta property="og:title" content="{{ title }}" />
   <meta property="og:description" content="{{ description }}" />
   <meta property="og:url" content="{{ canonical }}" />
