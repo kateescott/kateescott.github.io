@@ -1,24 +1,49 @@
+
+{% capture title -%}
+  {%- if page.url == '/' -%}
+    {{ site.title }}
+  {%- else if page.title -%}
+    {{ page.title }}
+  {%- else -%}
+    {{ site.title }}
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- capture description -%}
+  {%- if page.collection == "project" -%}
+    {{ page.content }}
+  {%- else if page.excerpt -%}
+    {{ page.excerpt }}
+  {%- else -%}
+    {{ site.description }}
+  {%- endif -%}
+{%- endcapture -%}
+
+{% assign canonical = page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url %}
+{% assign description = description | strip_html | strip_newlines | truncate: 160 %}
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>
-    {% if page.url == '/' %}
-      {{ site.title }}
-    {% else if page.title %}
-      {{ page.title }}
-    {% else %}
-      {{ site.title }}
-    {% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
   <meta name="google-site-verification" content="bb2q1CzZpW4fJosteb18nss_Pw2q2hDD3KwRdiXtJpE" />
   <link rel="stylesheet" href="{{ "/assets/css/site.css" | prepend: site.baseurl }}">
   <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500" rel="stylesheet">
 
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="canonical" href="{{ canonical }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
-  <meta property="og:image" content="/assets/icons/site-image.png" />
+
+  {% if page.collection == "projects" %}
+    <meta property="og:image" content="{{ page | get_featured_image_path | prepend: site.baseurl | prepend: site.url }}" />
+  {% endif %}
+  <meta property="og:image" content="{{ "/assets/icons/site-image.png" | prepend: site.baseurl | prepend: site.url }}" />
+  <meta property="og:title" content="{{ title }}" />
+  <meta property="og:description" content="{{ description }}" />
+  <meta property="og:url" content="{{ canonical }}" />
+  <meta property="og:type" content="website" />
+
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">

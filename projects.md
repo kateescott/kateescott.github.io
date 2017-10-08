@@ -3,5 +3,5 @@
 title: Projects
 menu_order: 3
 layout: listing
-collection: projects
+collection_name: projects
 ---

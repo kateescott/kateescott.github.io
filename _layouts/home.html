@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% assign items = site[page.collection] | where: "featured", true | sort: 'home_order' | get_featured_tiles %}
+{% assign items = site[page.collection_name] | where: "featured", true | sort: 'home_order' | get_featured_tiles %}
 <div class="container">
     {% include tiles.html num_cols=2 items=items intro_content=page.content classes="tiles--padded" %}
 </div>

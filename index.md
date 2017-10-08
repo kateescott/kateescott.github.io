@@ -1,7 +1,7 @@
 ---
 title: Home
 layout: home
-collection: projects
+collection_name: projects
 menu_order: 0
 ---
 
