@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+{% assign cols = site[page.collection] | where: "featured", true | chunked_array: 2  %}
+{% assign stripped_content = page.content | strip_newlines %}
+
+
+
+<div class="container">
+    <div class="tileContent">
+        <div class="tileContent__column">
+            {% if stripped_content != "" %}
+                <div class="tileContent__tile tileContent__tile--introduction">
+                    {{ content }}
+                </div>
+            {% endif %}
+
+            {% for page in cols[0] %}
+                <div class="tileContent__tile tileContent__tile--pink">
+                    <a class="tileContent__link" href="{{ page.url | prepend: site.baseurl }}">
+                        <img class="tileContent__image" src="{{ page | get_featured_image_path }}" />
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="tileContent__column">
+            {% for page in cols[1] %}
+                <div class="tileContent__tile tileContent__tile--pink">
+                    <a class="tileContent__link" href="{{ page.url | prepend: site.baseurl }}">
+                        <img class="tileContent__image" src="{{ page | get_featured_image_path }}" />
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

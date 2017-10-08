@@ -1,0 +1,30 @@
+{% assign num_cols = num_cols | default: 2 %}
+{% assign intro_content = include.intro_content | strip_newlines %}
+{% if intro_content != "" %}
+    {% assign items = items | add_dummy_entry %}
+{% endif %}
+{% assign cols = items | chunked_array: num_cols %}
+
+
+<div class="tiles {{ include.classes }}">
+
+    {% for col in cols %}
+        <div class="tiles__column tiles__column--nCols{{ num_cols }}">
+            {% if forloop.index == 1 and intro_content != "" %}
+                <div class="tiles__tile tiles__tile--introduction">
+                    {{ intro_content }}
+                </div>
+            {% endif %}
+            {% for tile in col %}
+                {% if tile.dummy %}
+                    {%  continue %}
+                {% endif %}
+                <div class="tiles__tile" {% if tile.style %}style="{{ tile.style }}"{% endif %}>
+                    <a class="tiles__tileLink" href="{{ tile.href | prepend: site.baseurl }}">
+                        <img class="tiles__tileImage" src="{{ tile.image | prepend: site.baseurl }}" />
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</div>

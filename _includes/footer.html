@@ -1,0 +1,25 @@
+
+
+<div class="container">
+  <div class="footer">
+    <div class="footer__socials">
+      {% assign chunked = site.social_links | chunked_array: 2 %}
+
+      {% for group in chunked %}
+        <div class="footer__socialsCol">
+          {% for item in group %}
+            <div class="footer__socialsItem">
+              <a class="footer__socialsLink" target="_blank" href="{{ item.link }}">{{ item.label }}</a>
+            </div>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+    <div class="footer__blurb">
+      <div class="footer__blurbText">{{ site.title }}</div>
+      <div class="footer__blurbText--right">&copy; {{ 'now' | date: "%Y" }}</div>
+    </div>
+  </div>
+</div>
+
+

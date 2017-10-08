@@ -1,0 +1,25 @@
+
+{% assign sorted_pages = (site.pages | sort: 'menu_order') %}
+{% for node in sorted_pages %}
+    {% if node.url == page.url %}
+        {% assign current_page = node.url %}
+        {% break %}
+    {% elsif page.url contains node.url %}
+        {% assign current_page = node.url %}
+    {% endif %}
+{% endfor %}
+
+<div class="container">
+  <nav class="menubar">
+    <div class="menubar__items">
+      {% for node in sorted_pages %}
+        {% if node.title %}
+          <a class="menubar__item {% if node.url == current_page %}menubar__item--active{% endif %}" href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="menubar__items menubar__items--right">
+      <a class="menubar__item menubar__item--accent" href="mailto:{{ site.email }}">{{ site.email }}</a>
+    </div>
+  </nav>
+</div>

@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+{% assign num_cols = page.num_cols | default: 2 %}
+{% assign items = page | get_project_tiles %}
+
+<div class="container">
+    <div class="pageContent">
+        {{ content }}
+    </div>
+
+    {% include tiles.html num_cols=num_cols items=items %}
+
+</div>
