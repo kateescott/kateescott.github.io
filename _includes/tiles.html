@@ -20,9 +20,15 @@
                     {%  continue %}
                 {% endif %}
                 <div class="tiles__tile" {% if tile.style %}style="{{ tile.style }}"{% endif %}>
-                    <a class="tiles__tileLink" href="{{ tile.href | prepend: site.baseurl }}">
+                    {% if tile.href %}
+                        <a class="tiles__tileLink" href="{{ tile.href | prepend: site.baseurl }}">
+                    {% endif %}
+
                         <img class="tiles__tileImage" src="{{ tile.image | prepend: site.baseurl }}" />
-                    </a>
+
+                    {% if tile.href %}
+                        </a>
+                    {% endif %}
                 </div>
             {% endfor %}
         </div>

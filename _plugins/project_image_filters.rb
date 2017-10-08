@@ -45,7 +45,7 @@ module Jekyll
 
     def get_project_tiles(project)
         get_image_paths(project).map { |image|
-            _new_tile(image, image, project['tile_style'])
+            _new_tile(nil, image, project['tile_style'])
         }
     end
 
