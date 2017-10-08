@@ -4,7 +4,7 @@ home_order: 2
 title: Coffee Break Zine
 featured: true
 featured_info:
-  image: 6.png
+  image: 6.jpg
 tile_style: 'background-image: linear-gradient(180deg, #ddd6f3 0%, #faaca8 100%);'
 ---
 

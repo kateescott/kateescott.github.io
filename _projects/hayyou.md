@@ -3,7 +3,7 @@ sort_order: 3
 title: HAYYOU
 featured: false
 featured_info:
-  image: Artboard2.png
+  image: Artboard2.jpg
 tile_style: 'background-image: linear-gradient(180deg, #d6e1f3 0%, rgb(168, 239, 250) 100%);'
 ---
 

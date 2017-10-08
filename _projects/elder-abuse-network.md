@@ -4,7 +4,7 @@ home_order: 1
 title: EAN Shoalhaven
 featured: true
 featured_info:
-  image: Artboard 1@2x copy.png
+  image: Artboard-1-copy.jpg
 tile_style: 'background-image: linear-gradient(180deg, #f3e6d6 0%, #fadda8 100%);'
 ---
 

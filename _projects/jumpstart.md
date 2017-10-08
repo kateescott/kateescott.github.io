@@ -5,7 +5,7 @@ title: Jumpstart iPad App
 featured: true
 num_cols: 1
 featured_info:
-  image: Artboard 3@2x.png
+  image: Artboard-3.jpg
 tile_style: 'background-image: linear-gradient(180deg, #d6f3e8 0%, #a8f6fa 100%);'
 ---
 

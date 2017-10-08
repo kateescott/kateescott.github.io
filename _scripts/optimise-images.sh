@@ -25,7 +25,7 @@ for file in $INPUT_DIR/*; do
     filename="$(echo "$filename" | sed "s/@2x//" | sed "s/\ /-/g")"
     output_path="$OUTPUT_PATH/$filename.jpg"
     echo "$base_filename -> $output_path"
-    convert "$file" -resize '1200>' -strip -define jpeg:extent=100KB "$output_path"
+    convert "$file" -resize '1200>' -strip -background white -flatten -define jpeg:extent=100KB "$output_path"
 done
 
 

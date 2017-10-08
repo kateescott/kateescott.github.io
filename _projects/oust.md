@@ -2,7 +2,7 @@
 sort_order: 5
 title: OUST
 featured_info:
-  image: 1.png
+  image: 1.jpg
 
 tile_style: 'background-image: linear-gradient(180deg, #ffb4b3 0%, #facaa8 100%);'
 ---
