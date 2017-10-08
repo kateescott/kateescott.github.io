@@ -1,5 +1,5 @@
 ---
-title: Home
+title: Kate Scott
 layout: home
 collection: projects
 menu_order: 0
