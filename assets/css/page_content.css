@@ -4,13 +4,22 @@
     width: 50%;
 }
 
-.pageContent p {
-    padding: 10px 0;
+.pageContent--fullWidth {
+    width: 100%;
+}
 
+.pageContent h1 {
+    font-size: 24px;
+    padding: 10px 0;
 }
 
 .pageContent h2 {
     font-weight: 500;
     font-size: 22px;
     padding: 10px 0;
+}
+
+.pageContent p {
+    padding: 10px 0;
+
 }

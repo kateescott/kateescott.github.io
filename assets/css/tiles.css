@@ -10,7 +10,7 @@
 }
 
 .tiles__column {
-  padding: 0px 30px;
+  padding: 0px 15px;
   flex-basis: 50%;
   box-sizing: border-box;
 }
@@ -66,19 +66,3 @@
   transform: scale(1.05);
 }
 
-
-@media screen and (max-width: 600px) {
-  .tileContent {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-  .tiles__column {
-    flex-basis: 100%;
-    padding: 0;
-  }
-
-  .tiles__tile {
-    padding: 30px;
-  }
-}

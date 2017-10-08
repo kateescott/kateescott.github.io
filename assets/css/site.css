@@ -42,3 +42,33 @@ body {
   }
 }
 
+@media screen and (max-width: 600px) {
+  .pageContent {
+    width: 100%;
+  }
+
+  .tileContent {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .tiles__column {
+    flex-basis: 100%;
+    padding: 0;
+  }
+
+  .tiles__tile {
+    padding: 30px;
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+  .menubar__items {
+    width: 100%;
+  }
+
+  .menubar__items:not(:first-child) {
+    margin-top: 15px;
+  }
+}
