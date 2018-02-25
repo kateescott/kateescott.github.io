@@ -20,6 +20,7 @@ module Jekyll
         slug = project['slug']
         path = File.join(dir, slug, '*')
         names = Dir[path]
+        names = names.sort
         return names
     end
 
