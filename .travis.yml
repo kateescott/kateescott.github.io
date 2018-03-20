@@ -14,8 +14,3 @@ deploy:
   fqdn: 'kateescott.com'
   on:
     branch: master
-
-  # Temporarily fix deployment:
-  # https://github.com/travis-ci/travis-ci/issues/9312#issuecomment-371951998
-  edge:
-    branch: pages-ivar-set
