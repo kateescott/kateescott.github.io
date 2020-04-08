@@ -1,0 +1,16 @@
+<div class="carousel" style="{{ page.tile_style }}">
+  <div class="carousel__itemContainer">
+    {% for item in items %}
+    <div class="carousel__item{% if forloop.index == 1 %} active{% endif %}">
+      <img class="carousel__itemImage" src="{{ item.image | prepend: site.baseurl }}"/>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="carousel__indicator">
+    {% for item in items %}
+    <div class="carousel__indicatorButtonClickable{% if forloop.index == 1 %} active{% endif %}">
+      <div class="carousel__indicatorButton"></div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

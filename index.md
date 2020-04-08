@@ -5,6 +5,7 @@ collection_name: projects
 menu_order: 0
 ---
 
-
-<p>Hi, I'm Kate 👋</p>
-<p style="margin-top: 10px;">Keeping it short and sweet - I'm a graphic designer located in Sydney</p>
+<div style="padding: 10px 0">
+  <h2 style="font-size: 36px; padding:0;">👋 Hi, I'm Kate —</h2>
+  <p style="font-size: 18px; padding: 0;">Graphic Designer located in Sydney</p>
+</div> 

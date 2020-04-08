@@ -37,6 +37,7 @@
   <title>{{ title }}</title>
   <meta name="description" content="{{ description }}">
   <meta name="google-site-verification" content="bb2q1CzZpW4fJosteb18nss_Pw2q2hDD3KwRdiXtJpE" />
+  <link rel="stylesheet" href="{{ "/assets/vendor/icomoon/style.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/assets/css/site.css" | prepend: site.baseurl }}">
   <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500" rel="stylesheet">
 
@@ -69,4 +70,6 @@
 
     gtag('config', 'UA-107685739-1');
   </script>
+  <!--- TODO(NW): Compile and minify JS with rollup -->
+  <script async defer src="{{ "/assets/js/carousel.js" | prepend: site.baseurl }}"></script>
 </head>

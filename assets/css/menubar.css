@@ -1,16 +1,13 @@
 .menubar {
-  margin-top: 170px;
+  margin-top: 60px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
 }
 
 .menubar__items {
   display: flex;
-}
-
-.menubar__items--right  {
-  align-self: flex-end;
 }
 
 .menubar__item {
@@ -29,6 +26,13 @@
   margin-right: 0;
 }
 
+.menubar__item--brand {
+  color: #F13921 !important;
+  font-size: 24px;
+  font-weight: 500;
+  padding-bottom: 0;
+  border-bottom: none;
+}
 
 .menubar__item,
 .menubar__item:visited,
@@ -45,14 +49,3 @@
   color: #555;
   border-bottom-color: #555;
 }
-
-.menubar__item--accent {
-  color: #EC8288;
-}
-
-.menubar__item--accent:hover {
-  color: #EC8288;
-  border-bottom-color: #EC8288;
-}
-
-
