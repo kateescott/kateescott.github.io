@@ -2,6 +2,7 @@
 sort_order: 1
 home_order: 2
 title: Coffee Break Zine
+subtitle: Some subtitle
 featured: true
 featured_info:
   image: 6.jpg
