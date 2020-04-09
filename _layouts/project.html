@@ -5,13 +5,36 @@ layout: default
 {% assign items = page | get_project_tiles %}
 
 <div class="container">
-    <div class="pageContent">
+  <div class="pageContent pageContent--split">
+    <div class="pageContent__left">
+      <div class="pageContent__leftSticky">
         <h2>{{ page.title }}</h2>
-        {% if page.subtitle %}
-            <h3>{{ page.subtitle }}</h3>
-        {% endif %}
-        {{ content }}
+        <div class="pageContent__meta">
+          <div class="pageContent__metaItem pageContent__metaItem--description">
+            <h3>About The Project</h3>
+            <div>{{ content }}</div>
+          </div>
+          <div class="pageContent__metaItem">
+            <h3>Date</h3>
+            <p>{{ page.year }}</p>
+          </div>
+          <div class="pageContent__metaItem">
+            <h3>Client</h3>
+            <p>{{ page.client }}</p>
+          </div>
+          <div class="pageContent__metaItem">
+            <h3>Categories</h3>
+            <p>{{ page.categories | join: ", " }}</p>
+          </div>
+        </div>
+      </div>
     </div>
-
-    {% include carousel.html items=items style=page.tile_style %}
+    <div class="pageContent__assetList">
+      {% for item in items %}
+      <div class="pageContent__asset" style="{{ page.tile_style }}">
+        <img class="pageContent__assetImage" src="{{ item.image | prepend: site.baseurl }}"/>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 </div>

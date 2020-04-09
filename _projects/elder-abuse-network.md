@@ -6,6 +6,10 @@ featured: true
 featured_info:
   image: Artboard-1-copy.jpg
 tile_style: 'background: #fadda8;'
+year: 2016
+client: EAN Shoalhaven
+categories:
+ - Branding
 ---
 
-As a part of a group project, we needed to establish a visual identity and brand strategy for EAN (Elder Abuse Network) Shoalhaven. It consisted of creating all necessary collateral required for advertising and increasing awareness of the network.
+EAN is a local interdisciplinary collaborate focused on addressing Elder Abuse in the Shoalhaven community. It aims to aid relevant local agencies in identifying, responding to and preventing abuse of older people.

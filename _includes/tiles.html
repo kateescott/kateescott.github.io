@@ -1,17 +1,8 @@
 <div class="tiles {{ include.classes }}">
   {% for tile in items %}
-    {% if tile.href %}
-      <a class="tiles__tile" {% if tile.style %}style="{{ tile.style }}" {% endif %} href="{{ tile.href | prepend: site.baseurl }}">
-    {% else %}
-      <div class="tiles__tile" {% if tile.style %}style="{{ tile.style }}" {% endif %}>
-    {% endif %}
-
-      <img class="tiles__tileImage" src="{{ tile.image | prepend: site.baseurl }}"/>
-
-    {% if tile.href %}
-      </a>
-    {% else %}
-      </div>
-    {% endif %}
+  <a class="tiles__tile" {% if tile.style %}style="{{ tile.style }}" {% endif %}
+     href="{{ tile.href | prepend: site.baseurl }}">
+    <img class="tiles__tileImage" src="{{ tile.image | prepend: site.baseurl }}"/>
+  </a>
   {% endfor %}
 </div>

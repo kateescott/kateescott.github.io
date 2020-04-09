@@ -1,7 +1,7 @@
 
 .tiles {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
 }
 
@@ -28,6 +28,24 @@ a.tiles__tile:active {
   object-fit: contain;
 }
 
+
+@media screen and (max-width: 1200px) {
+  .tiles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .tiles__tile {
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .tiles {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 
 /* Animations! */
 

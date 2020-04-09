@@ -15,7 +15,7 @@
   margin: 0 10px;
   padding-bottom: 5px;
   transition: 0.3s color, 0.3s border;
-  border-bottom: 1px solid transparent;
+  border-bottom: 2px solid transparent;
 }
 
 .menubar__item:first-child {
@@ -27,7 +27,7 @@
 }
 
 .menubar__item--brand {
-  color: #F13921 !important;
+  color: #222 !important;
   font-size: 24px;
   font-weight: 500;
   padding-bottom: 0;
@@ -41,11 +41,11 @@
 }
 
 .menubar__item--active {
-  color: #555;
-  border-bottom-color: #555;
+  color: #222;
+  border-bottom-color: #222;
 }
 
 .menubar__item:hover {
-  color: #555;
-  border-bottom-color: #555;
+  color: #222;
+  border-bottom-color: #222;
 }

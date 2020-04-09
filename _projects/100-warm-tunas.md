@@ -6,6 +6,11 @@ featured: true
 featured_info:
   image: 1.png
 tile_style: 'background: #fbfcdb;'
+year: 2016-2020
+client: '<a href="https://100warmtunas.com/">100 Warm Tunas</a>'
+categories:
+ - Branding
+ - Social
 ---
 
-I designed the artwork for the <a target="_blank" href="https://100-warm-tunas.nickwhyte.com/">100 Warm Tunas</a> project. 100 Warm Tunas is a yearly prediction of the Triple J Hottest 100. The project requires consistent artwork for different mediums, such as the website, promotional posts, and Spotify.
+100 Warm Tunas is a yearly prediction of Triple J’s Hottest 100.

@@ -5,6 +5,10 @@ featured: false
 featured_info:
   image: Artboard2.jpg
 tile_style: 'background: #d6e1f3;'
+year: 2018
+client: University of Wollongong
+categories:
+ - Branding
 ---
 
-As part of my major project for university, I developed a brand identity to promote meat products that are free of GMOs. It aims to support the agriculture and livelihood of Australian farmers.
+HayYou is a GMO free meat brand. It aims to support the agriculture and livelihood of Australian farmers.

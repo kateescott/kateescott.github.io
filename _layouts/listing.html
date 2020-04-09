@@ -2,13 +2,11 @@
 layout: default
 ---
 
-<div class="container">
-    <div class="pageContent {% if page.full_width %}pageContent--fullWidth{% endif %}">
-        {{ content }}
-    </div>
-</div>
-
 {% assign items = site[page.collection_name] | sort: 'sort_order' | get_featured_tiles %}
+
 <div class="container">
+  <div class="pageContent">
+    {{ content }}
     {% include tiles.html items=items %}
+  </div>
 </div>
