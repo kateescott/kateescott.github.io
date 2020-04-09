@@ -29,11 +29,11 @@
 .footer__socialsLink,
 .footer__socialsLink:active,
 .footer__socialsLink:visited {
-  color: #999;
+  color: #999999;
 }
 
 .footer__socialsLink:hover {
-  color: #555555;
+  color: #222222;
 }
 
 .footer__blurb {
@@ -43,6 +43,6 @@
 }
 
 .footer__blurbText {
-  color: #999;
+  color: #999999;
   font-weight: 400;
 }
