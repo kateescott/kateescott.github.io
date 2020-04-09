@@ -8,5 +8,15 @@ featured_info:
 tile_style: 'background: #d6f3e8;'
 ---
 
-During a studio project, I worked with another team member to make a childrens immersive physical education application come to life. The aim was to help children aged 3-5 develop basic cognitive tasks.
+<h3>About The Project</h3> 
 
+JumpStart is a children’s immersive physical education application that helps children aged 3-5 develop basic cognitive skills.
+
+<h3>Date</h3>
+2018
+
+<h3>Client</h3>
+University of Wollongong
+
+<h3>Categories</h3>
+App Design, Game Design

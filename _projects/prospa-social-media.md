@@ -1,6 +1,6 @@
 ---
 sort_order: 3 
-title: Prospa Social Media
+title: Social Media Posts
 featured: false
 featured_info:
   image: Artboard 10.png
