@@ -6,17 +6,12 @@ layout: default
 
 <div class="container">
     <div class="pageContent">
-        <div class="pageAssets">
-            {% include carousel.html items=items style=page.tile_style %}
-        </div>
-        <div>
-            <h2>{{ page.title }}</h2>
-            {% if page.subtitle %}
+        <h2>{{ page.title }}</h2>
+        {% if page.subtitle %}
             <h3>{{ page.subtitle }}</h3>
-            {% endif %}
-            {{ content }}
-        </div>
+        {% endif %}
+        {{ content }}
     </div>
 
-
+    {% include carousel.html items=items style=page.tile_style %}
 </div>

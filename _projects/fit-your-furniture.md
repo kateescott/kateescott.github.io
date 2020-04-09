@@ -7,15 +7,4 @@ featured_info:
 tile_style: 'background: #11544C;'
 ---
 
-<h3>About The Project</h3> 
-
 Fit Your Furniture help’s take the guesswork out of moving by measuring up your space and ensuring your items fit before moving in.
-
-<h3>Date</h3>
-2020
-
-<h3>Client</h3>
-Fit Your Furniture
-
-<h3>Categories</h3>
-Branding

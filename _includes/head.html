@@ -1,29 +1,30 @@
+
 {% capture title -%}
-{%- if page.url == '/' -%}
-{{ site.title }}
-{%- else if page.title -%}
-{{ page.title }}
-{%- else -%}
-{{ site.title }}
-{%- endif -%}
+  {%- if page.url == '/' -%}
+    {{ site.title }}
+  {%- else if page.title -%}
+    {{ page.title }}
+  {%- else -%}
+    {{ site.title }}
+  {%- endif -%}
 {%- endcapture -%}
 
 {%- capture description -%}
-{%- if page.collection == "project" -%}
-{{ page.content }}
-{%- else if page.excerpt -%}
-{{ page.excerpt }}
-{%- else -%}
-{{ site.description }}
-{%- endif -%}
+  {%- if page.collection == "project" -%}
+    {{ page.content }}
+  {%- else if page.excerpt -%}
+    {{ page.excerpt }}
+  {%- else -%}
+    {{ site.description }}
+  {%- endif -%}
 {%- endcapture -%}
 
 {%- capture featured_image -%}
-{%- if page.collection == "projects" -%}
-{{ page | get_featured_image_path }}
-{%- else -%}
-/assets/icons/site-image.png
-{%- endif -%}
+  {%- if page.collection == "projects" -%}
+    {{ page | get_featured_image_path }}
+  {%- else -%}
+    /assets/icons/site-image.png
+  {%- endif -%}
 {%- endcapture -%}
 
 {% assign canonical = page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url %}
@@ -38,11 +39,10 @@
   <meta name="google-site-verification" content="bb2q1CzZpW4fJosteb18nss_Pw2q2hDD3KwRdiXtJpE" />
   <link rel="stylesheet" href="{{ "/assets/vendor/icomoon/style.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/assets/css/site.css" | prepend: site.baseurl }}">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500" rel="stylesheet">
 
   <link rel="canonical" href="{{ canonical }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}"
-    href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
   <meta property="og:image" content="{{ featured_image | prepend: site.baseurl | prepend: site.url }}" />
   <meta property="og:title" content="{{ title }}" />
@@ -64,11 +64,11 @@
   <!-- Global Site Tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107685739-1"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-    gtag('config', 'UA-107685739-1');
+    gtag('config', 'UA-107685739-1');
   </script>
   <!--- TODO(NW): Compile and minify JS with rollup -->
   <script async defer src="{{ "/assets/js/carousel.js" | prepend: site.baseurl }}"></script>
