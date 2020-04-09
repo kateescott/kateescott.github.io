@@ -145,3 +145,39 @@
         margin-top: 20px;
     }
 }
+
+@keyframes pageContent_appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.pageContent__hero,
+.pageContent__left,
+.pageContent__right,
+.aboutPage__image,
+.aboutPage__content {
+    opacity: 0;
+    will-change: transform;
+    animation: 0.4s cubic-bezier(0.7, 1.3, 0.75, 1) forwards tiles_tileAppear;
+}
+
+.pageContent__right,
+.aboutPage__content {
+    animation-delay: 0.1s;
+}
+
+@media screen and (max-width: 850px) {
+    .aboutPage__content {
+        animation-delay: 0s;
+    }
+    .aboutPage__image {
+        animation-delay: 0.1s;
+    }
+}
