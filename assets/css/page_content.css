@@ -23,7 +23,6 @@
 .pageContent h2 {
     font-size: 36px;
     font-weight: 600;
-    line-height: 1.58;
     color: #222;
 }
 
@@ -37,7 +36,6 @@
 
 .pageContent p {
     padding: 10px 0;
-    line-height: 1.58;
     color: #999;
 }
 
