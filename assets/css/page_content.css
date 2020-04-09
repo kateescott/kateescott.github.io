@@ -10,6 +10,8 @@
 
 .pageContent__hero {
     padding: 120px 0;
+    /* Offset from the bottom tiles to center between header and home tiles */
+    margin-bottom: 60px;
     text-align: center;
 }
 
@@ -143,6 +145,12 @@
     .pageContent__meta {
         grid-gap: 20px;
         margin-top: 20px;
+    }
+
+    .pageContent__hero {
+        padding: 60px 0;
+        /* Offset from the bottom tiles to center between header and home tiles */
+        margin-bottom: 30px;
     }
 }
 
