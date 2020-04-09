@@ -1,14 +1,11 @@
 ---
-layout: default
+layout: page
 ---
 
 {% assign items = site[page.collection_name] | where: "featured", true | sort: 'home_order' | get_featured_tiles %}
 
-<div class="container">
-  <div class="pageContent">
-    <div class="pageContent__hero">
-      {{ content }}
-    </div>
-    {% include tiles.html items=items %}
-  </div>
+
+<div class="pageContent__hero">
+  {{ content }}
 </div>
+{% include tiles.html items=items %}
