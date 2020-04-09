@@ -125,6 +125,10 @@
     .pageContent__asset {
         padding: 30px;
     }
+
+    .pageContent--split {
+        grid-gap: 30px;
+    }
 }
 
 @media screen and (max-width: 450px) {
