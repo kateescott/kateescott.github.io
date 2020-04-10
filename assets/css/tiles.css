@@ -2,17 +2,16 @@
 .tiles {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
   grid-gap: 30px;
 }
 
 .tiles__tile {
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 50px;
-  height: 300px;
+  /*box-sizing: border-box;*/
+  position: relative;
   user-select: none;
+  /* Hack: force the tile to always have the same height as the width */
+  padding-top: 100%;
 }
 
 a.tiles__tile,
@@ -22,28 +21,72 @@ a.tiles__tile:active {
   color: inherit;
 }
 
+.tiles__tileContent {
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom: 0;
+  padding: 50px;
+  transition: 0.2s ease-in-out filter;
+}
+
 .tiles__tileImage {
   height: 100%;
   width: 100%;
   object-fit: contain;
 }
 
-
-@media screen and (max-width: 1200px) {
-  .tiles {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.tiles__tileInfo {
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: 0.2s ease-in-out opacity;
+  opacity: 0;
+  pointer-events: none;
+  font-size: 20px;
+  text-transform: uppercase;
 }
 
-@media screen and (max-width: 850px) {
-  .tiles__tile {
+.tiles__tile:hover .tiles__tileInfo {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.tiles__tile:hover .tiles__tileContent {
+  filter: blur(2px);
+}
+
+@media screen and (max-width: 1200px) {
+  .tiles__tileContent {
     padding: 30px;
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 850px) {
+  .tiles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tiles__tileContent {
+    padding: 50px;
+  }
+}
+
+@media screen and (max-width: 600px) {
   .tiles {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .tiles__tileContent {
+    padding: 30px;
   }
 }
 

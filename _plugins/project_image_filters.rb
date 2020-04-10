@@ -30,8 +30,8 @@ module Jekyll
         }
     end
 
-    def _new_tile(href, image, style)
-        return { "href" => href, "image" => image, "style" => style }
+    def _new_tile(title, href, image, style)
+        return { "href" => href, "image" => image, "style" => style, "title" => title }
     end
 
     def get_featured_tiles(projects)
@@ -39,14 +39,14 @@ module Jekyll
             href = item.url
             image = get_featured_image_path(item)
             style = item['tile_style']
-            _new_tile(href, image, style)
+            _new_tile(item['title'], href, image, style)
         }
         return items
     end
 
     def get_project_tiles(project)
         get_image_paths(project).map { |image|
-            _new_tile(nil, image, project['tile_style'])
+            _new_tile(project['title'], nil, image, project['tile_style'])
         }
     end
 

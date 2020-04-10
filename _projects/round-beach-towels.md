@@ -2,8 +2,8 @@
 sort_order: 5
 title: Round Beach Towels
 featured_info:
-  image: Artboard 4.png
-tile_style: 'background: #facaa8;'
+  image: 1.png
+tile_style: 'background: #FAD778;'
 year: 2018
 client: Affiniti Living
 categories:

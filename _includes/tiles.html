@@ -2,7 +2,12 @@
   {% for tile in items %}
   <a class="tiles__tile" {% if tile.style %}style="{{ tile.style }}" {% endif %}
      href="{{ tile.href | prepend: site.baseurl }}">
-    <img class="tiles__tileImage" src="{{ tile.image | prepend: site.baseurl }}"/>
+    <div class="tiles__tileContent">
+      <img class="tiles__tileImage" src="{{ tile.image | prepend: site.baseurl }}"/>
+    </div>
+    <div class="tiles__tileInfo">
+      <span>{{ tile.title }}</span>
+    </div>
   </a>
   {% endfor %}
 </div>
