@@ -5,6 +5,7 @@
 _site/
 .sass-cache/
 .jekyll-metadata
+.jekyll-cache
 
 # End of https://www.gitignore.io/api/jekyll
 *.DS_Store
