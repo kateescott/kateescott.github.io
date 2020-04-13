@@ -6,7 +6,7 @@ featured: true
 featured_info:
   image: home.png
   exclude_from_listing: true
-tile_style: 'background: #fadda8;'
+tile_style: 'background: #F9CBAC;'
 year: 2016
 client: Shoalhaven Aged Care / University of Wollongong
 categories:

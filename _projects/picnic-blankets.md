@@ -1,10 +1,10 @@
 ---
-sort_order: 6
+sort_order: 7
 title: Picnic Blankets
 featured: false
 featured_info:
   image: 1.png
-tile_style: 'background: #facaa8;'
+tile_style: 'background: #B6E2E9;'
 year: 2018
 client: Affiniti Living
 categories:

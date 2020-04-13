@@ -1,12 +1,12 @@
 ---
 sort_order: 8
-home_order: 2
+home_order: 4
 title: Self-Test App
-featured: false
+featured: true
 featured_info:
   image: home.png
   exclude_from_listing: true
-tile_style: 'background: #fbfcdb;'
+tile_style: 'background: #F7E1A9;'
 year: 2019
 client: WBS Technology/Elumen
 categories:

@@ -7,7 +7,7 @@ featured_info:
   image: home.png
   exclude_from_listing: true
   edge_to_edge: true
-tile_style: 'background: #E5F3E7;'
+tile_style: 'background: #B6E2E9;'
 year: 2020
 client: Prospa
 categories:

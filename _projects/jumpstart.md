@@ -5,7 +5,7 @@ title: Jumpstart
 featured: true
 featured_info:
   image: 1.png
-tile_style: 'background: #d6f3e8;'
+tile_style: 'background: #B6E2E9;'
 year: 2018
 client: University of Wollongong
 categories:

@@ -5,7 +5,7 @@ title: Icons
 featured: false
 featured_info:
   image: 1.png
-tile_style: 'background: #fbfcdb;'
+tile_style: 'background: #EEF0F2;'
 year: 2020
 client: Prospa
 categories:

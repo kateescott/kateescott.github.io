@@ -1,10 +1,10 @@
 ---
-sort_order: 4
+sort_order: 3
 title: HAYYOU
 featured: false
 featured_info:
   image: 1.png
-tile_style: 'background: #d6e1f3;'
+tile_style: 'background: #B5DEC4;'
 year: 2018
 client: University of Wollongong
 categories:
