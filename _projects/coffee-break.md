@@ -1,5 +1,5 @@
 ---
-sort_order: 1
+sort_order: 3
 home_order: 2
 title: Coffee Break
 year: 2018

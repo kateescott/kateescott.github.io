@@ -1,5 +1,5 @@
 ---
-sort_order: 3 
+sort_order: 11
 title: Image Retouching
 featured: false
 featured_info:

@@ -1,5 +1,5 @@
 ---
-sort_order: 3 
+sort_order: 12
 home_order: 3
 title: Social Media Posts
 featured: true

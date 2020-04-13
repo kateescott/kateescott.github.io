@@ -1,5 +1,5 @@
 ---
-sort_order: 5
+sort_order: 6
 title: Picnic Blankets
 featured: false
 featured_info:

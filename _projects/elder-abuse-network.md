@@ -1,5 +1,5 @@
 ---
-sort_order: 4
+sort_order: 2
 home_order: 6
 title: EAN Shoalhaven
 featured: true

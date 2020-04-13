@@ -1,5 +1,5 @@
 ---
-sort_order: 2
+sort_order: 5
 home_order: 5
 title: Jumpstart
 featured: true

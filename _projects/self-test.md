@@ -1,5 +1,5 @@
 ---
-sort_order: 6
+sort_order: 8
 home_order: 2
 title: Self-Test App
 featured: false

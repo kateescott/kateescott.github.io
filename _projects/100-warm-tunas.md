@@ -1,5 +1,5 @@
 ---
-sort_order: 6
+sort_order: 1
 title: 100 Warm Tunas
 featured: false
 featured_info:

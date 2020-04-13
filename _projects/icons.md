@@ -1,5 +1,5 @@
 ---
-sort_order: 6
+sort_order: 10
 home_order: 2
 title: Icons
 featured: false
