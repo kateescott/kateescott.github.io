@@ -1,11 +1,16 @@
 ---
-sort_order: 4
-home_order: 1
+sort_order: 2
+home_order: 6
 title: EAN Shoalhaven
 featured: true
 featured_info:
-  image: Artboard-1-copy.jpg
-tile_style: 'background-image: linear-gradient(180deg, #f3e6d6 0%, #fadda8 100%);'
+  image: home.png
+  exclude_from_listing: true
+tile_style: 'background: #F9CBAC;'
+year: 2016
+client: Shoalhaven Aged Care / University of Wollongong
+categories:
+ - Branding
 ---
 
-As a part of a group project, we needed to establish a visual identity and brand strategy for EAN (Elder Abuse Network) Shoalhaven. It consisted of creating all necessary collateral required for advertising and increasing awareness of the network.
+EAN is a local interdisciplinary collaborative focused on addressing Elder Abuse in the Shoalhaven community. It aims to aid relevant local agencies in identifying, responding to and preventing abuse of older people.

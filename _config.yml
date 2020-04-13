@@ -44,13 +44,14 @@ defaults:
       layout: project
 
 social_links:
-  - label: Twitter
-    link: https://twitter.com/katee_scott
   - label: Instagram
-    link: https://www.instagram.com/_kateescott/
+    icon: icon-instagram
+    link: https://www.instagram.com/kateescott/
   - label: Linkedin
+    icon: icon-linkedin-square
     link: https://www.linkedin.com/in/kateescott/
   - label: WordPress
+    icon: icon-wordpress
     link: https://kateescott.wordpress.com/
 
 # Exclude from processing.

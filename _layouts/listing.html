@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: page
 ---
 
-{% assign items = site[page.collection_name] | sort: 'sort_order' | get_featured_tiles %}
-<div class="container">
-    {% include tiles.html num_cols=2 items=items intro_content=page.content classes="tiles--padded" %}
-</div>
+{% assign items = site[page.collection_name] | sort: 'sort_order' | reverse | get_tiles %}
+
+{{ content }}
+{% include tiles.html items=items %}

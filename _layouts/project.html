@@ -2,14 +2,44 @@
 layout: default
 ---
 
-{% assign num_cols = page.num_cols | default: 2 %}
-{% assign items = page | get_project_tiles %}
+{% assign assets = page | get_project_assets %}
 
 <div class="container">
-    <div class="pageContent">
-        {{ content }}
+  <div class="pageContent pageContent--split">
+    <div class="pageContent__left">
+      <div class="pageContent__leftSticky">
+        <h2>{{ page.title }}</h2>
+        <div class="pageContent__meta">
+          <div class="pageContent__metaItem pageContent__metaItem--description">
+            <h3>About The Project</h3>
+            <div>{{ content }}</div>
+          </div>
+          <div class="pageContent__metaItem">
+            <h3>Date</h3>
+            <p>{{ page.year }}</p>
+          </div>
+          <div class="pageContent__metaItem">
+            <h3>Client</h3>
+            <p>{{ page.client }}</p>
+          </div>
+          <div class="pageContent__metaItem">
+            <h3>Categories</h3>
+            <p>{{ page.categories | join: ", " }}</p>
+          </div>
+        </div>
+      </div>
     </div>
-
-    {% include tiles.html num_cols=num_cols items=items %}
-
+    <div class="pageContent__right">
+      <div class="pageContent__assetList">
+        {% for asset in assets %}
+        <div class="pageContent__asset" style="{{ page.tile_style }}">
+          <img class="pageContent__assetImage"
+               src="{{ asset.image_path | prepend: site.baseurl }}"
+               {% if asset.image_path_2x %}srcset="{{ asset.image_path | prepend: site.baseurl }} 1x, {{ asset.image_path_2x | prepend: site.baseurl }} 2x"{% endif %}
+          />
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 </div>

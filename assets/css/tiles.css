@@ -1,72 +1,114 @@
 
 .tiles {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-
-.tiles--padded {
-  padding-top: 70px;
-}
-
-.tiles__column {
-  padding: 0px 15px;
-  flex-basis: 50%;
-  box-sizing: border-box;
-}
-.tiles__column--nCols1 {
-  flex-basis: 100%;
-}
-
-.tiles__column:first-child {
-  padding-left: 0px;
-}
-.tiles__column:last-child {
-  padding-right: 0px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  grid-gap: 30px;
 }
 
 .tiles__tile {
-  padding: 50px;
-  box-sizing: border-box;
-  display: inline-block;
-  width: 100%;
-  margin-bottom: 30px;
-  background-image: linear-gradient(180deg, #ddd6f3 0%, #faaca8 100%);
+  /*box-sizing: border-box;*/
+  position: relative;
+  user-select: none;
+  /* Ensure that blur is clipped to box boundaries */
+  overflow: hidden;
+  /* Hack: force the tile to always have the same height as the width */
+  padding-top: 100%;
 }
 
-.tiles__tile--introduction {
-  font-weight: 500;
-  font-size: 22px;
-  background-image: none;
-}
-
-.tiles__tileLink {
-  display: block;
-}
-
-.tiles__tileLink,
-.tiles__tileLink:visited,
-.tiles__tileLink:active {
+a.tiles__tile,
+a.tiles__tile:visited,
+a.tiles__tile:active {
   text-decoration: none;
   color: inherit;
 }
 
-.tiles__tile--pink {
+.tiles__tileContent {
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom: 0;
+  padding: 50px;
+  transition: 0.2s ease-in-out filter;
+}
 
+.tiles__tileContent--edgeToEdge {
+  padding: 0;
 }
 
 .tiles__tileImage {
+  height: 100%;
   width: 100%;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
-  transition: 0.3s transform;
-  background-color: white;
+  object-fit: contain;
 }
 
-.tiles__tileImage:hover {
-  transform: scale(1.05);
+.tiles__tileInfo {
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom: 0;
+  padding: 16px;
+  text-align: center;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: 0.2s ease-in-out opacity;
+  opacity: 0;
+  pointer-events: none;
+  font-size: 20px;
+  text-transform: uppercase;
 }
 
+.tiles__tile:hover .tiles__tileInfo {
+  opacity: 1;
+  pointer-events: initial;
+}
 
+.tiles__tile:hover .tiles__tileContent {
+  filter: blur(2px);
+}
+
+@media screen and (max-width: 1200px) {
+  .tiles__tileContent {
+    padding: 30px;
+  }
+
+  .tiles__tileContent--edgeToEdge {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .tiles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tiles__tileContent {
+    padding: 50px;
+  }
+
+  .tiles__tileContent--edgeToEdge {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .tiles {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .tiles__tileContent {
+    padding: 30px;
+  }
+
+  .tiles__tileContent--edgeToEdge {
+    padding: 0;
+  }
+}
 
 /* Animations! */
 
@@ -113,4 +155,28 @@
 
 .tiles__tile:nth-child(7) {
   animation-delay: 0.7s;
+}
+
+.tiles__tile:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+.tiles__tile:nth-child(9) {
+  animation-delay: 0.9s;
+}
+
+.tiles__tile:nth-child(10) {
+  animation-delay: 1s;
+}
+
+.tiles__tile:nth-child(11) {
+  animation-delay: 1.1s;
+}
+
+.tiles__tile:nth-child(12) {
+  animation-delay: 1.2s;
+}
+
+.tiles__tile:nth-child(1n + 13) {
+  animation-delay: 1.2s;
 }

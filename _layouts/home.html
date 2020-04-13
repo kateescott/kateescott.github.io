@@ -1,8 +1,15 @@
 ---
-layout: default
+layout: page
 ---
 
-{% assign items = site[page.collection_name] | where: "featured", true | sort: 'home_order' | get_featured_tiles %}
-<div class="container">
-    {% include tiles.html num_cols=2 items=items intro_content=page.content classes="tiles--padded" %}
+{% assign items = site[page.collection_name] | where: "featured", true | sort: 'home_order' | get_tiles %}
+
+
+<div class="pageContent__hero">
+  {{ content }}
+</div>
+{% include tiles.html items=items %}
+
+<div class="pageContent__footer">
+  <a href="{{ '/projects' | prepend: site.baseurl }}">See more &rarr;</a>
 </div>

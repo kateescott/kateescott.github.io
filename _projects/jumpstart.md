@@ -1,13 +1,16 @@
 ---
-sort_order: 2
-home_order: 3
-title: Jumpstart iPad App
+sort_order: 5
+home_order: 5
+title: Jumpstart
 featured: true
-num_cols: 1
 featured_info:
-  image: Artboard-3.jpg
-tile_style: 'background-image: linear-gradient(180deg, #d6f3e8 0%, #a8f6fa 100%);'
+  image: 1.png
+tile_style: 'background: #B6E2E9;'
+year: 2018
+client: University of Wollongong
+categories:
+ - App Design
+ - Game Design
 ---
 
-During a studio project, I worked with another team member to make a childrens immersive physical education application come to life. The aim was to help children aged 3-5 develop basic cognitive tasks.
-
+JumpStart is a children’s immersive physical education application that helps children aged 3-5 develop basic cognitive skills.
