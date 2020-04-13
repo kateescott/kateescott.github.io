@@ -1,10 +1,10 @@
 ---
 sort_order: 2
-home_order: 3
+home_order: 5
 title: Jumpstart
 featured: true
 featured_info:
-  image: Artboard-3.jpg
+  image: 1.png
 tile_style: 'background: #d6f3e8;'
 year: 2018
 client: University of Wollongong

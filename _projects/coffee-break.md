@@ -9,7 +9,7 @@ categories:
  - Illustration
 featured: true
 featured_info:
-  image: 6.jpg
+  image: 1.png
 tile_style: 'background: #faaca8;'
 ---
 

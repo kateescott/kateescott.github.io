@@ -1,9 +1,10 @@
 ---
 sort_order: 3 
+home_order: 1
 title: Mardi Gras
-featured: false
+featured: true
 featured_info:
-  image: Artboard 13.png
+  image: home.png
 tile_style: 'background: #E5F3E7;'
 year: 2020
 client: Prospa

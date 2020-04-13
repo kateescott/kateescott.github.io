@@ -1,8 +1,7 @@
 ---
 sort_order: 6
-home_order: 2
 title: 100 Warm Tunas
-featured: true
+featured: false
 featured_info:
   image: 1.png
 tile_style: 'background: #fbfcdb;'

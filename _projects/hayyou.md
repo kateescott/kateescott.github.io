@@ -3,7 +3,7 @@ sort_order: 3
 title: HAYYOU
 featured: false
 featured_info:
-  image: Artboard2.jpg
+  image: 1.png
 tile_style: 'background: #d6e1f3;'
 year: 2018
 client: University of Wollongong

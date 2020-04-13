@@ -1,6 +1,8 @@
 ---
 sort_order: 5
+home_order: 4
 title: Round Beach Towels
+featured: true
 featured_info:
   image: 1.png
 tile_style: 'background: #FAD778;'

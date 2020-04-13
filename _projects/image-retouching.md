@@ -3,7 +3,7 @@ sort_order: 3
 title: Image Retouching
 featured: false
 featured_info:
-  image: Artboard 15.png
+  image: home.png
 tile_style: 'background: #E5F3E7;'
 year: 2020
 client: Prospa

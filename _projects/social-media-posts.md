@@ -1,7 +1,8 @@
 ---
 sort_order: 3 
+home_order: 3
 title: Social Media Posts
-featured: false
+featured: true
 featured_info:
   image: 1.png
 tile_style: 'background: #B5DEC4;'
