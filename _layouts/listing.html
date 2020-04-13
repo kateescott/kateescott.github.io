@@ -2,7 +2,7 @@
 layout: page
 ---
 
-{% assign items = site[page.collection_name] | sort: 'sort_order' | get_featured_tiles %}
+{% assign items = site[page.collection_name] | sort: 'year' | reverse | get_tiles %}
 
 {{ content }}
 {% include tiles.html items=items %}

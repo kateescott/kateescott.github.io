@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% assign items = page | get_project_tiles %}
+{% assign assets = page | get_project_assets %}
 
 <div class="container">
   <div class="pageContent pageContent--split">
@@ -31,9 +31,12 @@ layout: default
     </div>
     <div class="pageContent__right">
       <div class="pageContent__assetList">
-        {% for item in items %}
+        {% for asset in assets %}
         <div class="pageContent__asset" style="{{ page.tile_style }}">
-          <img class="pageContent__assetImage" src="{{ item.image | prepend: site.baseurl }}"/>
+          <img class="pageContent__assetImage"
+               src="{{ asset.image_path | prepend: site.baseurl }}"
+               {% if asset.image_path_2x %}srcset="{{ asset.image_path | prepend: site.baseurl }} 1x, {{ asset.image_path_2x | prepend: site.baseurl }} 2x"{% endif %}
+          />
         </div>
         {% endfor %}
       </div>

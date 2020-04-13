@@ -10,6 +10,8 @@
   /*box-sizing: border-box;*/
   position: relative;
   user-select: none;
+  /* Ensure that blur is clipped to box boundaries */
+  overflow: hidden;
   /* Hack: force the tile to always have the same height as the width */
   padding-top: 100%;
 }
@@ -31,6 +33,10 @@ a.tiles__tile:active {
   transition: 0.2s ease-in-out filter;
 }
 
+.tiles__tileContent--edgeToEdge {
+  padding: 0;
+}
+
 .tiles__tileImage {
   height: 100%;
   width: 100%;
@@ -43,6 +49,8 @@ a.tiles__tile:active {
   left:0;
   right:0;
   bottom: 0;
+  padding: 16px;
+  text-align: center;
   background-color: rgba(0,0,0,0.7);
   display: flex;
   justify-content: center;
@@ -68,6 +76,10 @@ a.tiles__tile:active {
   .tiles__tileContent {
     padding: 30px;
   }
+
+  .tiles__tileContent--edgeToEdge {
+    padding: 0;
+  }
 }
 
 @media screen and (max-width: 850px) {
@@ -78,6 +90,10 @@ a.tiles__tile:active {
   .tiles__tileContent {
     padding: 50px;
   }
+
+  .tiles__tileContent--edgeToEdge {
+    padding: 0;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -87,6 +103,10 @@ a.tiles__tile:active {
 
   .tiles__tileContent {
     padding: 30px;
+  }
+
+  .tiles__tileContent--edgeToEdge {
+    padding: 0;
   }
 }
 

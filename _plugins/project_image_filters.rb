@@ -1,53 +1,66 @@
 module Jekyll
   module ProjectImageFilters
-    def get_img_path(project, filename)
-        slug = project['slug']
-        dir = @context.registers[:site].config['collections']['projects']['img_path']
-        return File.join(dir, slug, filename)
-    end
-
     def get_featured_image_path(project)
         info = project['featured_info']
         if !info then return nil end
         image = info['image']
         if !image then return nil end
-        return get_img_path(project, image)
+        assets_root_dir = @context.registers[:site].config['collections']['projects']['img_path']
+
+        File.join(assets_root_dir, project['slug'], image)
     end
 
-    def _get_project_image_filenames(project)
-        dir = @context.registers[:site].config['collections']['projects']['img_path']
-        dir = dir[1..-1] # Remove first char (/)
-        slug = project['slug']
-        path = File.join(dir, slug, '*')
-        names = Dir[path]
-        names = names.sort
-        return names
+    def get_2x_name(filename)
+      ext = File.extname(filename)
+      File.basename(filename, ext) + "@2x" + ext
     end
 
-    def get_image_paths(project)
-        return _get_project_image_filenames(project).map { |e|
-            get_img_path(project, File.basename(e))
+    def get_tiles(projects)
+      projects.map { |project|
+        assets_root_dir = @context.registers[:site].config['collections']['projects']['img_path'][1..-1]
+        featured_image_name = project["featured_info"]["image"]
+        featured_image_name_2x = get_2x_name(featured_image_name)
+
+        featured_image_path = File.join(assets_root_dir, project['slug'], featured_image_name)
+        featured_image_path_2x = File.join(assets_root_dir, project['slug'], featured_image_name_2x)
+        has_2x = File.exist?(featured_image_path_2x)
+
+        {
+            "href" => project.url,
+            "image_path" => "/" + featured_image_path,
+            "image_path_2x" => has_2x ? "/" + featured_image_path_2x : nil,
+            "style" => project['tile_style'],
+            "title" => project['title'],
+            "edge_to_edge" => project['featured_info']['edge_to_edge'],
         }
+      }
     end
 
-    def _new_tile(title, href, image, style)
-        return { "href" => href, "image" => image, "style" => style, "title" => title }
-    end
+    def get_project_assets(project)
+      assets_root_dir = @context.registers[:site].config['collections']['projects']['img_path'][1..-1]
+      project_assets_dir = File.join(assets_root_dir, project['slug'], '/')
+      unless Dir.exist?(project_assets_dir)
+        return []
+      end
 
-    def get_featured_tiles(projects)
-        items = projects.map { |item|
-            href = item.url
-            image = get_featured_image_path(item)
-            style = item['tile_style']
-            _new_tile(item['title'], href, image, style)
+      assets = Dir.children(project_assets_dir)
+                   .select { |file| file.match(/\.(jpe?g|png)$/) }
+                   .sort
+
+      if project["featured_info"]["exclude_from_listing"]
+        exclude = project["featured_info"]["image"]
+        assets = assets.select { |file| file != exclude }
+      end
+
+      assets_1x = assets.select { |file| not file.match(/@2x\.([^.]+)$/) }
+      assets_1x.map do |file|
+        file_2x = get_2x_name(file)
+        has_2x = assets.include? file_2x
+        {
+            "image_path" => "/" + File.join(project_assets_dir, file),
+            "image_path_2x" => has_2x ? "/" + File.join(project_assets_dir, file_2x) : nil,
         }
-        return items
-    end
-
-    def get_project_tiles(project)
-        get_image_paths(project).map { |image|
-            _new_tile(project['title'], nil, image, project['tile_style'])
-        }
+      end
     end
 
   end

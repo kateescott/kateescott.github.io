@@ -2,8 +2,11 @@
   {% for tile in items %}
   <a class="tiles__tile" {% if tile.style %}style="{{ tile.style }}" {% endif %}
      href="{{ tile.href | prepend: site.baseurl }}">
-    <div class="tiles__tileContent">
-      <img class="tiles__tileImage" src="{{ tile.image | prepend: site.baseurl }}"/>
+    <div class="tiles__tileContent{%if tile.edge_to_edge %} tiles__tileContent--edgeToEdge{% endif %}">
+      <img class="tiles__tileImage"
+           src="{{ tile.image_path | prepend: site.baseurl }}"
+           {% if tile.image_path_2x %}srcset="{{ tile.image_path | prepend: site.baseurl }} 1x, {{ tile.image_path_2x | prepend: site.baseurl }} 2x"{% endif %}
+      />
     </div>
     <div class="tiles__tileInfo">
       <span>{{ tile.title }}</span>
