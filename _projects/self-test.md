@@ -5,8 +5,9 @@ title: Self-Test App
 featured: false
 featured_info:
   image: home.png
+  exclude_from_listing: true
 tile_style: 'background: #fbfcdb;'
-year: 2018
+year: 2019
 client: WBS Technology/Elumen
 categories:
  - App Design
