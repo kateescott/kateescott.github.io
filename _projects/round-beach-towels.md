@@ -12,4 +12,4 @@ categories:
  - Textile Design
 ---
 
-Gemstone inspired round microfibre beach towels were designed as part of Odyssey Living’s 2018/19 summer range. 
+Gemstone inspired round microfibre beach towels were designed as part of Odyssey Living’s 2018/19 summer range.

@@ -12,4 +12,4 @@ categories:
  - Branding
 ---
 
-Additional icons to expand Prospa's existing icon library.
+Additional icons created to expand Prospa's existing icon library.

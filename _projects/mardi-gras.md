@@ -13,4 +13,4 @@ categories:
  - Event Design
 ---
 
-Event collateral for an internal Mardi Gras event at Prospa.
+Event collateral for an internal Mardi Gras event at Prospa aligning with the Mardi Gras 2020 theme of What Matters. 

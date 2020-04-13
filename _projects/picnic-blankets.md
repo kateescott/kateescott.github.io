@@ -11,4 +11,4 @@ categories:
  - Textile Design
 ---
 
-Perfect for beach picnics, camping, sports or a day at the part, these geometric inspired picnic blankets are part of the Odyssey Living 2018/19 outdoor living range. The blanket folds into a compact unit with a velcro closure and carry handle.
+Perfect for beach picnics, camping, sports or a day at the park, these geometric-inspired picnic blankets are part of the Odyssey Living 2018/19 outdoor living range. 

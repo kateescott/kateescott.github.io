@@ -13,4 +13,4 @@ featured_info:
 tile_style: 'background: #faaca8;'
 ---
 
-A zine which explores the impact coffee cups have on the environment, by satirically portraying keep cups from a negative perspective. It aims to empower consumers to make better and more considerate choices for the future.
+A zine inspired by the War on Waste which explores keep cup culture and the impact that coffee cups have on the environment, by satirically portraying keep cups from a negative perspective. It aims to empower consumers to make better and more considerate choices for the future. 

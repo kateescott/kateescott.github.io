@@ -11,4 +11,4 @@ categories:
  - Branding
 ---
 
-HayYou is a GMO free meat brand. It aims to support the agriculture and livelihood of Australian farmers.
+HayYou is a brand that aims to support the agriculture and livelihood of Australian Farmers by encouraging consumers to shop responsibly and shop GMO-free.

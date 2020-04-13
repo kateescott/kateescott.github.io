@@ -13,4 +13,4 @@ categories:
  - Social
 ---
 
-A series of social media posts for Prospa.
+A series of social media posts for Prospa including for Easter, Valentines Day and TrustPilot celebrations.
