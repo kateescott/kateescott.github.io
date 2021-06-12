@@ -1,0 +1,76 @@
+/*
+
+COLOURS
+=======
+
+Main Body     #999999
+Dark Body     #222222
+*/
+
+@import 'reset.css';
+@import 'menubar.css';
+@import 'tiles.css';
+@import 'footer.css';
+@import 'page_content.css';
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #999999;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 100px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/*
+ * "Blessed" responsive breakpoints
+ * xl: max-width: 1200px
+ * lg: max-width: 850px
+ * md: max-width: 600px
+ * sm: max-width: 450px
+ * Use these consistently throughout other css modules to ensure there is minimal "jank" when
+ * switching viewport sizes.
+ */
+
+/* large-down */
+@media screen and (max-width: 850px) {
+  .container {
+    padding: 0 50px;
+  }
+
+  .menubar {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .pageContent {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  .menubar {
+    margin-top: 30px;
+  }
+
+  .menubar__items {
+    width: 100%;
+  }
+
+  .menubar__items:not(:first-child) {
+    margin-top: 15px;
+  }
+}
